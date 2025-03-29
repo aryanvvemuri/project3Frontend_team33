@@ -25,7 +25,7 @@ function MenuPage() {
 
   return (
     <div className="menu-page">
-      <h2>🍹 Select Your Drink</h2>
+      <h2>🍹 Select Your Menu Item</h2>
       <div className="menu-grid">
         {filteredMenuItems.map(item => (
           <div className="menu-card" key={item.idmenu}>
