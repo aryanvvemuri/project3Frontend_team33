@@ -5,6 +5,7 @@ import MenuPage from './components/MenuPage';
 import CustomizePage from './components/CustomizePage';
 import CartPage from './components/CartPage';
 import NavBar from './components/NavBar';
+import AboutPage from './components/AboutPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/menu/:categoryId" element={<MenuPage />} />
         <Route path="/customize/:id" element={<CustomizePage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   );
