@@ -16,12 +16,12 @@ function App() {
         <Route path="/menu/:categoryId" element={<MenuPage />} />
         <Route path="/customize/:id" element={<CustomizePage />} />
         
-        {/* ✅ Debug version of the CartPage route */}
+        {}
         <Route
           path="/cart"
           element={
             <>
-              {console.log('📦 Rendering <CartPage />')}
+              {console.log(' Rendering <CartPage />')}
               <CartPage />
             </>
           }

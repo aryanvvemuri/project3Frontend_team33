@@ -10,10 +10,11 @@ function AboutPage() {
       </p>
       <p>
         Our mission is to bring joy to your day, one drink at a time. You can explore our full menu, where
-        we have a wide variety of menu items from milk and fruit tea to dumplings.
+        we have a wide variety of menu items from milk and fruit tea to dumplings. We are committed to having
+        100% customer satisfaction with our product.
       </p>
       <p>
-        Click on the menu page to get started!!
+        Click on the menu page to get started!! We hope you enjoy your experience!
       </p>
     </div>
   );

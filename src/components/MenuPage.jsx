@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useCart } from './CartContext'; // ✅ Import cart hook
+import { useCart } from './CartContext'; //Import cart hook
 import './MenuPage.css';
 
 function MenuPage() {
   const { categoryId } = useParams();
   const [menuItems, setMenuItems] = useState([]);
-  const { addToCart } = useCart(); // ✅ Use addToCart from context
+  const { addToCart } = useCart(); //Use addToCart from context
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +31,7 @@ function MenuPage() {
       toppings: [],
     };
     addToCart(defaultItem);
-    alert(`✅ Added ${item.item} to cart!`);
+    alert(`Added ${item.item} to cart!`);
   };
 
   return (
@@ -49,7 +49,7 @@ function MenuPage() {
           </div>
         ))}
       </div>
-      <button className="back-btn" onClick={() => navigate('/')}>⬅ Back</button>
+      <button className="back-btn" onClick={() => navigate('/')}> Back</button>
     </div>
   );
 }

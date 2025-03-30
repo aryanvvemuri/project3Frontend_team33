@@ -5,20 +5,20 @@ import axios from 'axios';
 const CartPage = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
 
-  console.log('🧾 Current cart items:', cartItems); // Debug cart items
+  console.log('🧾 Current cart items:', cartItems); //debugging
 
   const total = cartItems.reduce((sum, item) => sum + Number(item.price || 0), 0);
 
   const handlePlaceOrder = async () => {
     try {
       for (const item of cartItems) {
-        console.log('📤 Sending item to backend:', item);
+        console.log(' Sending item to backend:', item);
         await axios.post('https://leboba.onrender.com/api/carts/add', item);
       }
-      alert('✅ Order placed successfully!');
+      alert(' Order placed successfully!');
       clearCart();
     } catch (err) {
-      console.error('❌ Error placing order:', err);
+      console.error(' Error placing order:', err);
       alert('There was an issue placing your order.');
     }
   };
@@ -27,7 +27,7 @@ const CartPage = () => {
     <div className="cart-page">
       <h2>🛒 Your Cart</h2>
       
-    <p style={{ color: 'limegreen' }}>✅ Cart page loaded successfully</p>
+    <p style={{ color: 'limegreen' }}> Cart page loading success</p>
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
@@ -56,14 +56,14 @@ const CartPage = () => {
           <h3>Total: ${total.toFixed(2)}</h3>
 
           <div className="cart-actions">
-            <button onClick={handlePlaceOrder}>🧾 Place Order</button>
+            <button onClick={handlePlaceOrder}>Place Order</button>
             <button
               onClick={() => {
                 console.log('🧹 Clearing cart');
                 clearCart();
               }}
             >
-              🗑️ Clear Cart
+               Clear Cart
             </button>
           </div>
         </>
