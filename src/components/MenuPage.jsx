@@ -36,8 +36,10 @@ function MenuPage() {
 
   return (
     <div className="menu-page">
-      <h2>🍹 Select Your Menu Item</h2>
-      <div className="menu-grid">
+      <header>
+        <h2>🍹 Select Your Menu Item</h2>
+      </header>
+      <main className="menu-grid">
         {filteredMenuItems.map(item => (
           <div className="menu-card" key={item.idmenu}>
             <h4>{item.item}</h4>
@@ -48,8 +50,10 @@ function MenuPage() {
             </div>
           </div>
         ))}
-      </div>
-      <button className="back-btn" onClick={() => navigate('/')}> Back</button>
+      </main>
+      <footer>
+        <button className="back-btn" onClick={() => navigate('/')}>Back</button>
+      </footer>
     </div>
   );
 }
