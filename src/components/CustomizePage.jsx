@@ -16,8 +16,15 @@ const CustomizePage = () => {
 
   // 1. Fetch the drink being customized
   useEffect(() => {
-    axios.get(`https://leboba.onrender.com/api/menu/items${id}`)
-      .then(res => setItem(res.data))
+    axios.get(`https://leboba.onrender.com/api/menu/items`)
+      .then(res => {
+        const selectedItem = res.data.find(item => item.idmenu === parseInt(id));
+        if (selectedItem) {
+          setItem(selectedItem);
+        } else {
+          console.error('Item not found');
+        }
+      })
       .catch(err => console.error('Failed to fetch item:', err));
   }, [id]);
 
