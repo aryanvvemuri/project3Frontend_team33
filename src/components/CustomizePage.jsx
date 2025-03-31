@@ -62,6 +62,8 @@ const CustomizePage = () => {
 
     addToCart(customDrink);
     console.log('Added to cart:', customDrink);
+    alert(`Added ${item.item} to cart!`);
+
   };
 
   if (!item) return <div>Loading...</div>;
